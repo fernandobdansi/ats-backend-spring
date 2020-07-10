@@ -45,7 +45,7 @@ public class ServicosController {
 		return ResponseEntity.ok().body(obj);
 	}
 
-	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/{id}", method = RequestMethod.PATCH)
 	public ResponseEntity<Servicos> update(@Valid @RequestBody Servicos obj, BindingResult br) {
 		if (br.hasErrors())
 			throw new ConstraintException(br.getAllErrors().get(0).getDefaultMessage());
