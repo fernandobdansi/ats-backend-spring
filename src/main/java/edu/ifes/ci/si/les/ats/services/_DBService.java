@@ -68,13 +68,13 @@ public class _DBService {
 				"Rua Oriente - Jacigua - Vargem Alta");
 
 		Tecnico tecnico1 = new Tecnico(null, "Alberto da Silva", "12345411993", "28895513872",
-				"Rua Oriente - Jacigua - Vargem Alta");
+				"Rua Oriente - Jacigua - Vargem Alta","albertosilva","alb123");
 		Tecnico tecnico2 = new Tecnico(null, "Rodrigo da Silva", "12346599993", "28999477872",
-				"Rua Oriente - Jacigua - Vargem Alta");
+				"Rua Oriente - Jacigua - Vargem Alta","rodrigosilva","rod123");
 		Tecnico tecnico3 = new Tecnico(null, "Fernando da Silva", "12347989993", "28996593872",
-				"Rua Oriente - Jacigua - Vargem Alta");
+				"Rua Oriente - Jacigua - Vargem Alta","fernandosilva","fer123");
 		Tecnico tecnico4 = new Tecnico(null, "Lucas da Silva", "12345732293", "28999134872",
-				"Rua Oriente - Jacigua - Vargem Alta");
+				"Rua Oriente - Jacigua - Vargem Alta","lucassilva","luc123");
 
 		Dispositivo dispositivo1 = new Dispositivo(null, modelo1, 123456789, "Cor Azul", cliente1);
 		Dispositivo dispositivo2 = new Dispositivo(null, modelo2, 127476789, "Cor Vermelha", cliente2);

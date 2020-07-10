@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import edu.ifes.ci.si.les.ats.model.Marca;
 import edu.ifes.ci.si.les.ats.model.Modelo;
 import edu.ifes.ci.si.les.ats.services.ModeloService;
 import edu.ifes.ci.si.les.ats.services.exceptions.ConstraintException;
@@ -56,6 +57,14 @@ public class ModeloController {
 	public ResponseEntity<Void> delete(@PathVariable Integer id) {
 		service.delete(id);
 		return ResponseEntity.noContent().build();
+	}
+	
+    @RequestMapping(value="/findByMarca/{idMarca}", method=RequestMethod.GET)
+	public ResponseEntity<Collection<Modelo>> findByMarca(@PathVariable Integer idMarca) {
+		Marca obj = new Marca();
+		obj.setId(idMarca);
+		Collection<Modelo> collection = service.findByMarca(obj);
+		return ResponseEntity.ok().body(collection);
 	}
 
 }

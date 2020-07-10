@@ -43,6 +43,16 @@ public class Tecnico implements Serializable {
 	@Column(length = 200)
 	@NotBlank(message = "O Campo deve ser preenchido")
 	@Size(min = 10, max = 200, message = "O campo deve ter pelo menos 10 e no maximo 200 letras")
-	private String endereço;
+	private String endereco;
+	
+	@Column(length = 50)
+	@NotBlank(message = "O Campo deve ser preenchido")
+	@Size(min = 3, max = 50, message = "O campo deve ter pelo menos 3 e no maximo 50 letras")
+	private String login;
+	
+	@Column(length = 50)
+	@NotBlank(message = "O Campo deve ser preenchido")
+	@Size(min = 5, max = 50, message = "O campo deve ter pelo menos 3 e no maximo 50 letras")
+	private String senha;
 
 }

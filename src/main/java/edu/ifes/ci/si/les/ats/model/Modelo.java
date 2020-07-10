@@ -29,7 +29,7 @@ public class Modelo implements Serializable {
 	@Column(length = 20)
 	@NotBlank(message = "O Campo deve ser preenchido")
 	@Size(min = 3, max = 20, message = "O campo deve ter pelo menos 3 e no maximo 20 letras")
-	private String nome;
+	private String nomeModelo;
 
 	@ManyToOne
 	@JoinColumn(name = "marca_id")

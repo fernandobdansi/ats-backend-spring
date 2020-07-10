@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
+import edu.ifes.ci.si.les.ats.model.Marca;
 import edu.ifes.ci.si.les.ats.model.Modelo;
 import edu.ifes.ci.si.les.ats.repositories.ModeloRepository;
 import edu.ifes.ci.si.les.ats.services.exceptions.DataIntegrityException;
@@ -28,6 +29,10 @@ public class ModeloService {
 	public Collection<Modelo> findAll() {
 		return repository.findAll();
 	}
+	
+    public Collection<Modelo> findByMarca(Marca marca) {
+        return repository.findByMarca(marca);
+    }
 
 	public Modelo insert(Modelo obj) {
 		obj.setId(null);
