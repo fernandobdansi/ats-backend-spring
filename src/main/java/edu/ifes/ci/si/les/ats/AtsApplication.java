@@ -20,7 +20,7 @@ public class AtsApplication {
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**")
 					.allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD", "TRACE", "CONNECT")
-					.allowedOrigins("http://localhost:8080").allowedOrigins("https://fbuenod.github.io/ats-frontend-vue");
+					.allowedOrigins("http://localhost:8080","https://fbuenod.github.io/ats-frontend-vue");
 				
 			}
 		};
