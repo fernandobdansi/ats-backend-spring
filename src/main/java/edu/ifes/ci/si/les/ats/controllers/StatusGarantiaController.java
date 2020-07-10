@@ -18,7 +18,7 @@ import edu.ifes.ci.si.les.ats.services.StatusGarantiaService;
 import edu.ifes.ci.si.les.ats.services.exceptions.ConstraintException;
 
 @RestController
-@RequestMapping(value = "/statusgarantia")
+@RequestMapping(value = "/api/v1/statusgarantia")
 public class StatusGarantiaController {
 
 	@Autowired

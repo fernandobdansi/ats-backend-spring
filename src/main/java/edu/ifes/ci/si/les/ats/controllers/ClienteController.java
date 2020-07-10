@@ -18,7 +18,7 @@ import edu.ifes.ci.si.les.ats.services.ClienteService;
 import edu.ifes.ci.si.les.ats.services.exceptions.ConstraintException;
 
 @RestController
-@RequestMapping(value = "/clientes")
+@RequestMapping(value = "/api/v1/clientes")
 public class ClienteController {
 
 	@Autowired

@@ -18,7 +18,7 @@ import edu.ifes.ci.si.les.ats.services.ModeloService;
 import edu.ifes.ci.si.les.ats.services.exceptions.ConstraintException;
 
 @RestController
-@RequestMapping(value = "/modelos")
+@RequestMapping(value = "/api/v1/modelos")
 public class ModeloController {
 
 	@Autowired

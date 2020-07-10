@@ -18,7 +18,7 @@ import edu.ifes.ci.si.les.ats.services.StatusOrdemDeServicoService;
 import edu.ifes.ci.si.les.ats.services.exceptions.ConstraintException;
 
 @RestController
-@RequestMapping(value = "/statusordem")
+@RequestMapping(value = "/api/v1/statusordem")
 public class StatusOrdemDeServicoController {
 
 	@Autowired

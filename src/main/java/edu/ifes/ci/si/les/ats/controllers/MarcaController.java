@@ -18,7 +18,7 @@ import edu.ifes.ci.si.les.ats.services.MarcaService;
 import edu.ifes.ci.si.les.ats.services.exceptions.ConstraintException;
 
 @RestController
-@RequestMapping(value = "/marcas")
+@RequestMapping(value = "/api/v1/marcas")
 public class MarcaController {
 
 	@Autowired

@@ -18,7 +18,7 @@ import edu.ifes.ci.si.les.ats.services.DispositivoService;
 import edu.ifes.ci.si.les.ats.services.exceptions.ConstraintException;
 
 @RestController
-@RequestMapping(value = "/dispositivos")
+@RequestMapping(value = "/api/v1/dispositivos")
 public class DispositivoController {
 
 	@Autowired

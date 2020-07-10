@@ -18,7 +18,7 @@ import edu.ifes.ci.si.les.ats.services.ServicosService;
 import edu.ifes.ci.si.les.ats.services.exceptions.ConstraintException;
 
 @RestController
-@RequestMapping(value = "/servicos")
+@RequestMapping(value = "/api/v1/servicos")
 public class ServicosController {
 
 	@Autowired

@@ -18,7 +18,7 @@ import edu.ifes.ci.si.les.ats.services.TecnicoService;
 import edu.ifes.ci.si.les.ats.services.exceptions.ConstraintException;
 
 @RestController
-@RequestMapping(value = "/tecnicos")
+@RequestMapping(value = "/api/v1/tecnicos")
 public class TecnicoController {
 
 	@Autowired
