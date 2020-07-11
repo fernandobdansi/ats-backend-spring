@@ -25,19 +25,19 @@ public class Tecnico implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	@Column(length = 50)
+	@Column(length = 200)
 	@NotBlank(message = "O Campo deve ser preenchido")
-	@Size(min = 10, max = 50, message = "O campo deve ter pelo menos 10 e no maximo 50 letras")
+	@Size(min = 10, max = 200, message = "O campo deve ter pelo menos 10 e no maximo 200 letras")
 	private String nome;
 
 	@Column(length = 13)
 	@NotBlank(message = "O Campo deve ser preenchido")
-	@Size(min = 13, max = 13, message = "O campo deve ter 13 digitos")
+	@Size(min = 11, max = 11, message = "O campo deve ter 11 digitos")
 	private String cpf;
 
-	@Column(length = 12)
+	@Column(length = 13)
 	@NotBlank(message = "O Campo deve ser preenchido")
-	@Size(min = 12, max = 12, message = "O campo deve ter pelo menos 12 digitos")
+	@Size(min = 10, max = 13, message = "O campo deve ter pelo menos 10 digitos")
 	private String telefone;
 
 	@Column(length = 200)
@@ -47,7 +47,7 @@ public class Tecnico implements Serializable {
 	
 	@Column(length = 50)
 	@NotBlank(message = "O Campo deve ser preenchido")
-	@Size(min = 3, max = 50, message = "O campo deve ter pelo menos 3 e no maximo 50 letras")
+	@Size(min = 5, max = 50, message = "O campo deve ter pelo menos 5 e no maximo 50 letras")
 	private String login;
 	
 	@Column(length = 50)

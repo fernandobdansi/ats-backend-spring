@@ -25,9 +25,9 @@ public class Cliente implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
-	@Column(length = 50)
+	@Column(length = 200)
 	@NotBlank(message = "O Campo deve ser preenchido")
-	@Size(min = 10, max = 50, message = "O campo deve ter pelo menos 10 e no maximo 50 letras")
+	@Size(min = 10, max = 200, message = "O campo deve ter pelo menos 10 e no maximo 200 letras")
 	private String nome;
 
 	@Column(length = 11)
@@ -35,14 +35,14 @@ public class Cliente implements Serializable {
 	@Size(min = 11, max = 11, message = "O campo deve ter 11 digitos")
 	private String cpf;
 
-	@Column(length = 11)
+	@Column(length = 13)
 	@NotBlank(message = "O Campo deve ser preenchido")
-	@Size(min = 11, max = 11, message = "O campo deve ter 11 digitos")
+	@Size(min = 10, max = 13, message = "O campo deve ter pelo menos 10 digitos")
 	private String telefone;
 
-	@Column(length = 100)
+	@Column(length = 200)
 	@NotBlank(message = "O Campo deve ser preenchido")
-	@Size(min = 10, max = 100, message = "O campo deve ter pelo menos 10 e no maximo 100 letras")
+	@Size(min = 10, max = 200, message = "O campo deve ter pelo menos 10 e no maximo 200 letras")
 	private String endereco;
 
 }
