@@ -76,10 +76,10 @@ public class _DBService {
 		Tecnico tecnico4 = new Tecnico(null, "Lucas da Silva", "123.457.322-93", "(28) 9991-4872",
 				"Rua Oriente - Jacigua - Vargem Alta","lucassilva","luc123");
 
-		Dispositivo dispositivo1 = new Dispositivo(null, modelo1, 123456789, "Cor Azul", cliente1);
-		Dispositivo dispositivo2 = new Dispositivo(null, modelo2, 127476789, "Cor Vermelha", cliente2);
-		Dispositivo dispositivo3 = new Dispositivo(null, modelo3, 193456789, "Cor Verde", cliente3);
-		Dispositivo dispositivo4 = new Dispositivo(null, modelo4, 124456789, "Cor Cinza", cliente4);
+		Dispositivo dispositivo1 = new Dispositivo(null, modelo1, "123456789", "Cor Azul", cliente1);
+		Dispositivo dispositivo2 = new Dispositivo(null, modelo2, "127476789", "Cor Vermelha", cliente2);
+		Dispositivo dispositivo3 = new Dispositivo(null, modelo3, "193456789", "Cor Verde", cliente3);
+		Dispositivo dispositivo4 = new Dispositivo(null, modelo4, "124456789", "Cor Cinza", cliente4);
 
 		Servicos servicos1 = new Servicos(null, "Trocar Tela");
 		Servicos servicos2 = new Servicos(null, "Trocar Bateria");

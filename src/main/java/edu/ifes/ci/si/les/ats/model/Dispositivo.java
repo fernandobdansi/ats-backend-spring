@@ -34,7 +34,7 @@ public class Dispositivo implements Serializable {
 	@Column(length = 9)
 	@NotBlank(message = "O Campo deve ser preenchido")
 	@Size(min = 5, max = 9, message = "O campo deve ter pelo menos 5 e no maximo 9 digitos")
-	private int numSerie;
+	private String numSerie;
 
 	@Column(length = 150)
 	@NotBlank(message = "O Campo deve ser preenchido")
