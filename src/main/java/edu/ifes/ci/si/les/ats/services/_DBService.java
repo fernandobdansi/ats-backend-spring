@@ -58,22 +58,22 @@ public class _DBService {
 		Modelo modelo3 = new Modelo(null, "11 Pro", marca2);
 		Modelo modelo4 = new Modelo(null, "Lumia", marca4);
 
-		Cliente cliente1 = new Cliente(null, "Jose da Silva", "12345678993", "28999533872",
+		Cliente cliente1 = new Cliente(null, "Jose da Silva", "123.456.789-93", "(28) 9995-3872",
 				"Rua Oriente - Jacigua - Vargem Alta");
-		Cliente cliente2 = new Cliente(null, "Francisca da Silva", "12376878993", "28945633872",
+		Cliente cliente2 = new Cliente(null, "Francisca da Silva", "123.768.789-93", "(28) 9456-3872",
 				"Rua Oriente - Jacigua - Vargem Alta");
-		Cliente cliente3 = new Cliente(null, "Roberto da Silva", "12331478993", "28999739872",
+		Cliente cliente3 = new Cliente(null, "Roberto da Silva", "123.314.789-93", "(28) 9997-9872",
 				"Rua Oriente - Jacigua - Vargem Alta");
-		Cliente cliente4 = new Cliente(null, "Alexandre da Silva", "12345789993", "28999513872",
+		Cliente cliente4 = new Cliente(null, "Alexandre da Silva", "123.457.899-93", "(28) 9995-3872",
 				"Rua Oriente - Jacigua - Vargem Alta");
 
-		Tecnico tecnico1 = new Tecnico(null, "Alberto da Silva", "12345411993", "28895513872",
+		Tecnico tecnico1 = new Tecnico(null, "Alberto da Silva", "123.454.119-93", "(28) 8955-1872",
 				"Rua Oriente - Jacigua - Vargem Alta","albertosilva","alb123");
-		Tecnico tecnico2 = new Tecnico(null, "Rodrigo da Silva", "12346599993", "28999477872",
+		Tecnico tecnico2 = new Tecnico(null, "Rodrigo da Silva", "123.465.999-93", "(28) 9994-7872",
 				"Rua Oriente - Jacigua - Vargem Alta","rodrigosilva","rod123");
-		Tecnico tecnico3 = new Tecnico(null, "Fernando da Silva", "12347989993", "28996593872",
+		Tecnico tecnico3 = new Tecnico(null, "Fernando da Silva", "123.479.899-93", "(28) 9965-3872",
 				"Rua Oriente - Jacigua - Vargem Alta","fernandosilva","fer123");
-		Tecnico tecnico4 = new Tecnico(null, "Lucas da Silva", "12345732293", "28999134872",
+		Tecnico tecnico4 = new Tecnico(null, "Lucas da Silva", "123.457.322-93", "(28) 9991-4872",
 				"Rua Oriente - Jacigua - Vargem Alta","lucassilva","luc123");
 
 		Dispositivo dispositivo1 = new Dispositivo(null, modelo1, 123456789, "Cor Azul", cliente1);

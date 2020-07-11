@@ -30,14 +30,14 @@ public class Tecnico implements Serializable {
 	@Size(min = 10, max = 200, message = "O campo deve ter pelo menos 10 e no maximo 200 letras")
 	private String nome;
 
-	@Column(length = 13)
+	@Column(length = 14)
 	@NotBlank(message = "O Campo deve ser preenchido")
-	@Size(min = 11, max = 11, message = "O campo deve ter 11 digitos")
+	@Size(min = 14, max = 14, message = "O campo deve ter 14 digitos")
 	private String cpf;
 
-	@Column(length = 13)
+	@Column(length = 14)
 	@NotBlank(message = "O Campo deve ser preenchido")
-	@Size(min = 10, max = 13, message = "O campo deve ter pelo menos 10 digitos")
+	@Size(min = 14, max = 14, message = "O campo deve ter pelo menos 14 digitos")
 	private String telefone;
 
 	@Column(length = 200)
