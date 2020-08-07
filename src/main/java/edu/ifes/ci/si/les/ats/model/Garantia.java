@@ -8,7 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.NotBlank;
@@ -45,9 +44,8 @@ public class Garantia implements Serializable {
 	private String dataSaida;
 
 	@OneToOne
-	@JoinColumns({ @JoinColumn(name = "ordemdeservico_id", insertable = false, updatable = false),
-			@JoinColumn(name = "servico_id", insertable = false, updatable = false) })
-	private OrdemServicoItem ordemServicoItem;
+	@JoinColumn(name = "ordemdeservico_id")
+	private OrdemDeServico ordemDeServico;
 
 	@ManyToOne
 	@JoinColumn(name = "statusgarantia_id")
