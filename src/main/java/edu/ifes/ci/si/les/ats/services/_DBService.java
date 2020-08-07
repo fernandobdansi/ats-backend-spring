@@ -102,9 +102,7 @@ public class _DBService {
 		tecnicoRepository.saveAll(Arrays.asList(tecnico1, tecnico2, tecnico3, tecnico4));
 		dispositivoRepository.saveAll(Arrays.asList(dispositivo1, dispositivo2, dispositivo3, dispositivo4));
 		servicosRepository.saveAll(Arrays.asList(servicos1, servicos2, servicos3, servicos4));
-		statusgarantiaRepository
-				.saveAll(Arrays.asList(statusGarantia1, statusGarantia2, statusGarantia3, statusGarantia4));
+		statusgarantiaRepository.saveAll(Arrays.asList(statusGarantia1, statusGarantia2, statusGarantia3, statusGarantia4));
 		statusordemdeservicoRepository.saveAll(Arrays.asList(statusOrdem1, statusOrdem2, statusOrdem3, statusOrdem4));
-
 	}
 }
