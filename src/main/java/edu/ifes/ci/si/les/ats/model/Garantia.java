@@ -33,9 +33,9 @@ public class Garantia implements Serializable {
 	@Size(min = 10, max = 150, message = "O campo deve ter pelo menos 10 e no maximo 150 letras")
 	private String motivo;
 
-	@Column(length = 8)
+	@Column(length = 10)
 	@NotBlank(message = "O Campo deve ser preenchido")
-	@Size(min = 8, max = 8, message = "O campo deve ter 8 digitos")
+	@Size(min = 10, max = 10, message = "O campo deve ter 8 digitos")
 	private String dataEntrada;
 
 	@OneToOne

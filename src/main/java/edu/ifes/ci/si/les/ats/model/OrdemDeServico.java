@@ -46,9 +46,9 @@ public class OrdemDeServico implements Serializable {
 	private Collection<OrdemServicoItem> ordemServicosItem = new ArrayList<>();
 
 	@NotNull(message = "O Campo deve ser preenchida")
-	@Column(length = 8)
+	@Column(length = 10)
 	@NotBlank(message = "O Campo deve ser preenchido")
-	@Size(min = 8, max = 8, message = "O campo deve ter 8 digitos")
+	@Size(min = 10, max = 10, message = "O campo deve ter 8 digitos")
 	private String dataEntrada;
 
 	@NotNull(message = "O Campo deve ser preenchida")
@@ -68,9 +68,9 @@ public class OrdemDeServico implements Serializable {
 	private float valorTotal;
 
 	@NotNull(message = "O Campo deve ser preenchida")
-	@Column(length = 8)
+	@Column(length = 10)
 	@NotBlank(message = "O Campo deve ser preenchido")
-	@Size(min = 8, max = 8, message = "O campo deve ter 8 digitos")
+	@Size(min = 10, max = 10, message = "O campo deve ter 8 digitos")
 	private String dataSaida;
 
 	@NotNull(message = "O Campo deve ser preenchida")
