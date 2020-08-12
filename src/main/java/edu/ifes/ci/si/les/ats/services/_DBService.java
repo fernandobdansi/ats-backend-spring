@@ -2,24 +2,32 @@ package edu.ifes.ci.si.les.ats.services;
 
 import java.io.IOException;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Arrays;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StreamUtils;
 
 import edu.ifes.ci.si.les.ats.model.Cliente;
 import edu.ifes.ci.si.les.ats.model.Dispositivo;
+import edu.ifes.ci.si.les.ats.model.FeedBack;
+import edu.ifes.ci.si.les.ats.model.Garantia;
 import edu.ifes.ci.si.les.ats.model.Marca;
 import edu.ifes.ci.si.les.ats.model.Modelo;
+import edu.ifes.ci.si.les.ats.model.Orcamento;
+import edu.ifes.ci.si.les.ats.model.OrdemDeServico;
+import edu.ifes.ci.si.les.ats.model.OrdemServicoItem;
 import edu.ifes.ci.si.les.ats.model.Servicos;
 import edu.ifes.ci.si.les.ats.model.StatusGarantia;
 import edu.ifes.ci.si.les.ats.model.StatusOrdemDeServico;
 import edu.ifes.ci.si.les.ats.model.Tecnico;
 import edu.ifes.ci.si.les.ats.repositories.ClienteRepository;
 import edu.ifes.ci.si.les.ats.repositories.DispositivoRepository;
+import edu.ifes.ci.si.les.ats.repositories.FeedBackRepository;
+import edu.ifes.ci.si.les.ats.repositories.GarantiaRepository;
 import edu.ifes.ci.si.les.ats.repositories.MarcaRepository;
 import edu.ifes.ci.si.les.ats.repositories.ModeloRepository;
+import edu.ifes.ci.si.les.ats.repositories.OrcamentoRepository;
+import edu.ifes.ci.si.les.ats.repositories.OrdemDeServicoRepository;
 import edu.ifes.ci.si.les.ats.repositories.ServicosRepository;
 import edu.ifes.ci.si.les.ats.repositories.StatusGarantiaRepository;
 import edu.ifes.ci.si.les.ats.repositories.StatusOrdemDeServicoRepository;
@@ -44,7 +52,15 @@ public class _DBService {
 	private StatusGarantiaRepository statusgarantiaRepository;
 	@Autowired
 	private StatusOrdemDeServicoRepository statusordemdeservicoRepository;
-
+	@Autowired
+	private OrdemDeServicoRepository ordemDeServicoRepository;
+	@Autowired
+	private FeedBackRepository feedBackRepository;
+	@Autowired
+	private GarantiaRepository garantiaRepository;
+	@Autowired
+	private OrcamentoRepository orcamentoRepository;
+	
 	public void instantiateTestDatabase() throws ParseException, IOException {
 
 		// Instanciando os objetos de modelo
@@ -95,7 +111,26 @@ public class _DBService {
 		StatusOrdemDeServico statusOrdem2 = new StatusOrdemDeServico(null, "Em Vistoria");
 		StatusOrdemDeServico statusOrdem3 = new StatusOrdemDeServico(null, "Fechado");
 		StatusOrdemDeServico statusOrdem4 = new StatusOrdemDeServico(null, "Aguardando Peças");
+				
+		OrdemDeServico ordemDeServico1 = new OrdemDeServico(null, cliente1,dispositivo1,"2020-08-08","Tela Quebrada",tecnico1,100,"2020-08-10",statusOrdem3);
+		OrdemDeServico ordemDeServico2 = new OrdemDeServico(null, cliente2,dispositivo2,"2020-08-12","Bateria Ruim",tecnico2,200,"2020-08-13",statusOrdem3);
 
+		OrdemServicoItem ordemServicoItem = new OrdemServicoItem(ordemDeServico1, servicos1, 100);
+		OrdemServicoItem ordemServicoItem2 = new OrdemServicoItem(ordemDeServico2, servicos2, 150);
+		OrdemServicoItem ordemServicoItem3 = new OrdemServicoItem(ordemDeServico2, servicos4, 50);
+		
+		ordemDeServico1.setOrdemServicosItem(Arrays.asList(ordemServicoItem));
+		ordemDeServico2.setOrdemServicosItem(Arrays.asList(ordemServicoItem2,ordemServicoItem3));
+		
+		FeedBack feedBack1 = new FeedBack(null,"Muito Bom",5,ordemDeServico1);
+		FeedBack feedBack2 = new FeedBack(null,"Podia ser mais Barato",3,ordemDeServico2);
+		
+		Garantia garantia1 = new Garantia(null, "Tela Descolou", "2020-08-15", ordemDeServico1, statusGarantia1);
+		Garantia garantia2 = new Garantia(null, "Celular não carrega", "2020-08-16", ordemDeServico2, statusGarantia1);
+		
+		Orcamento orcamento1 = new Orcamento(null, cliente1, dispositivo1, tecnico1, "Tela Quebrada", 100);
+		Orcamento orcamento2 = new Orcamento(null, cliente2, dispositivo2, tecnico2, "Bateria Ruim", 200);
+		
 		marcaRepository.saveAll(Arrays.asList(marca1, marca2, marca3, marca4));
 		modeloRepository.saveAll(Arrays.asList(modelo1, modelo2, modelo3, modelo4));
 		clienteRepository.saveAll(Arrays.asList(cliente1, cliente2, cliente3, cliente4));
@@ -104,5 +139,13 @@ public class _DBService {
 		servicosRepository.saveAll(Arrays.asList(servicos1, servicos2, servicos3, servicos4));
 		statusgarantiaRepository.saveAll(Arrays.asList(statusGarantia1, statusGarantia2, statusGarantia3, statusGarantia4));
 		statusordemdeservicoRepository.saveAll(Arrays.asList(statusOrdem1, statusOrdem2, statusOrdem3, statusOrdem4));
+		
+		ordemDeServicoRepository.saveAll(Arrays.asList(ordemDeServico1, ordemDeServico2));
+		feedBackRepository.saveAll(Arrays.asList(feedBack1, feedBack2));
+		garantiaRepository.saveAll(Arrays.asList(garantia1, garantia2));
+		orcamentoRepository.saveAll(Arrays.asList(orcamento1, orcamento2));
+		
+		
+		
 	}
 }

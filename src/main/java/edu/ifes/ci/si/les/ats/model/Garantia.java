@@ -38,11 +38,6 @@ public class Garantia implements Serializable {
 	@Size(min = 8, max = 8, message = "O campo deve ter 8 digitos")
 	private String dataEntrada;
 
-	@Column(length = 8)
-	@NotBlank(message = "O Campo deve ser preenchido")
-	@Size(min = 8, max = 8, message = "O campo deve ter 8 digitos")
-	private String dataSaida;
-
 	@OneToOne
 	@JoinColumn(name = "ordemdeservico_id")
 	private OrdemDeServico ordemDeServico;
