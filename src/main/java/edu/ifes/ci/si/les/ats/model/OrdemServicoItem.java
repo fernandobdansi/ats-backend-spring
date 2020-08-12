@@ -30,4 +30,30 @@ public class OrdemServicoItem implements Serializable {
 	@Size(min = 2, max = 100, message = "O campo deve ter pelo menos 2 e no maximo 100 digitos")
 	private float valor;
 
+    @Builder
+    public OrdemServicoItem(OrdemDeServico ordemDeServico, Servicos servicos, float valor) {
+        this.id.setOrdemDeServico(ordemDeServico);
+        this.id.setServicos(servicos);
+        this.valor = valor;
+    }
+
+    @JsonIgnore
+    public OrdemDeServico getOrdemDeServico() {
+        return id.getOrdemDeServico();
+    }
+
+    public void setOrdemDeServico(OrdemDeServico ordemDeServico) {
+        id.setOrdemDeServico(ordemDeServico);
+    }
+
+    public Servicos getServicos() {
+        return id.getServicos();
+    }
+
+    public void setServicos(Servicos servicos) {
+        id.setServicos(servicos);
+    }
+	
+	
+
 }

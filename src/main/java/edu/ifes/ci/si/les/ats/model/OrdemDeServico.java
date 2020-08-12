@@ -78,4 +78,19 @@ public class OrdemDeServico implements Serializable {
 	@JoinColumn(name = "statusordemdeservico_id")
 	private StatusOrdemDeServico statusOrdemDeServico;
 
+    @Builder
+	public OrdemDeServico(Integer id, Cliente cliente, Dispositivo dispositivo, String dataEntrada,
+			String descricaoProblema, Tecnico tecnico, float valorTotal, String dataSaida,
+			StatusOrdemDeServico statusOrdemDeServico) {
+		this.id = id;
+		this.cliente = cliente;
+		this.dispositivo = dispositivo;
+		this.dataEntrada = dataEntrada;
+		this.descricaoProblema = descricaoProblema;
+		this.tecnico = tecnico;
+		this.valorTotal = valorTotal;
+		this.dataSaida = dataSaida;
+		this.statusOrdemDeServico = statusOrdemDeServico;
+	}
+
 }
