@@ -18,7 +18,7 @@ import edu.ifes.ci.si.les.ats.services.OrcamentoService;
 import edu.ifes.ci.si.les.ats.services.exceptions.ConstraintException;
 
 @RestController
-@RequestMapping(value = "/api/v1/Orcamentos")
+@RequestMapping(value = "/api/v1/orcamentos")
 public class OrcamentoController {
 
 	@Autowired

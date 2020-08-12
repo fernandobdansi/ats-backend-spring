@@ -18,7 +18,7 @@ import edu.ifes.ci.si.les.ats.services.OrdemDeServicoService;
 import edu.ifes.ci.si.les.ats.services.exceptions.ConstraintException;
 
 @RestController
-@RequestMapping(value = "/api/v1/OrdemDeServicos")
+@RequestMapping(value = "/api/v1/ordemdeservicos")
 public class OrdemDeServicoController {
 
 	@Autowired
