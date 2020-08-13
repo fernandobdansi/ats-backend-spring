@@ -1,83 +1,90 @@
-# API - ATS - Assistência Técnica Services
+<h1 align="center">
+    <img alt="ATS" src="https://github.com/fbuenod/ats-backend-spring/blob/master/assets/logoats.png" />
+</h1>
 
-## API ATS *versão 1 (v1)*:
+<h3 align="center">
+  ATS - Assistência Técnica Services - BackEnd - Spring Boot
+</h3>
 
-**Retorna todas os Clientes:**
+<p align="center">Exemplo de um Sistema para Gerenciamento de uma Assistência Técnica</p>
 
-GET `/clientes`
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/fbuenod/ats-backend-spring?color=%2304D361">
 
-**Retorna um Cliente pelo ID:**
+  <a href="https://www.linkedin.com/in/fernandobuenodansi/">
+    <img alt="Made by Fernando Bueno Dansi" src="https://img.shields.io/badge/made%20by-Fernando%20Bueno%20Dansi-%2304D361">
+  </a>
 
-* Parâmentro: `id_cliente`
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
 
-GET `/clientes/<int:id_cliente>/` 
+  <a href="https://github.com/fbuenod/ats-backend-spring/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/fbuenod/ats-backend-spring?style=social">
+  </a>
+</p>
 
-**Retorna todas os Tecnicos:**
+<p align="center">
+  <a href="#-sobre">Sobre o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-instalacao">Instalação e execução</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-links">Links</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-licenca">Licença</a>
+</p>
 
-GET `/tecnicos`
+## :page_with_curl: Sobre o projeto <a name="-sobre"/></a>
 
-**Retorna um Tecnico pelo ID:**
+> É proposto o desenvolvimento de um Sistema de Controle de uma Assistência Técnica, que vai informatizar as funções de ordem de serviço, garantias, orçamentos e feedbacks.
 
-* Parâmentro: `id_tecnico`
+O objetivo do sistema é agilizar o processo de ordens de serviço e garantir maior segurança, ao mesmo tempo possibilitar um melhor controle das informações por parte da gerência. Deverão ser gerados relatórios de relacionados aos cadastros básicos, bem como aos eventos de ordem de serviço, garantias, orçamentos e feedbacks. O Sistema contem essas e muitas outras funções!
 
-GET `/tecnicos/<int:id_tecnico>/` 
+### Manutenção de Cadastros
 
-**Retorna todas as Marcas:**
+```
+* Técnico
+* Cliente
+* Marca
+* Modelo
+* Dispositivo
+* Servicos
+* Status de Garantia
+* Status de Ordem de Serviço
+```
 
-GET `/marcas`
+### Processos de Negócio
 
-**Retorna uma Marca pelo ID:**
+```
+* Ordem De Serviço
+* Orçamento
+* Garantia
+* FeedBack
+```
 
-* Parâmentro: `id_marca`
+### Relatórios
 
-GET `/marcas/<int:id_marca>/` 
+```
+* Em breve!	
+```
 
-**Retorna todas os Modelos:**
+## :computer: Instalação e execução <a name="-instalacao"/></a>
 
-GET `/modelos`
+0. Instale o gerenciador de dependências [Maven](https://maven.apache.org/download.cgi);
+1. Faça um clone desse repositório;
+2. Entre na pasta rodando `cd ats-backend-spring`;
+3. Rode `mvn spring-boot:run` para iniciar o servidor de desenvolvimento;
+4. Abra `http://localhost:8080` para ver o projeto no navegador.
 
-**Retorna um Modelo pelo ID:**
+## :link: Links <a name="-links"/></a>
 
-* Parâmentro: `id_modelo`
+- [GitHub Pages](https://fbuenod.github.io/ats-frontend-vue/) - Implantação do ATS Frontend Vue.js;
+- [Heroku](https://ats-backend-spring.herokuapp.com/) - Implantação do ATS Backend Spring Boot;
+- [Postman](https://documenter.getpostman.com/view/8892843/T1LLGUP5) - Documentação do ATS Backend Spring Boot;
 
-GET `/modelos/<int:id_modelo>/` 
+## :memo: Licença <a name="-licenca"/></a>
 
-**Retorna todas os Dispositivos:**
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
-GET `/dispositivos`
+## :email: Contato
 
-**Retorna um Dispositivo pelo ID:**
+Fernando Bueno Dansi - [GitHub](https://github.com/fbuenod) - [LinkedIn](https://www.linkedin.com/in/fernandobuenodansi) - **fernandobuenodansi@gmail.com**
 
-* Parâmentro: `id_dispositivo`
+---
 
-GET `/dispositivos/<int:id_dispositivo>/` 
-
-**Retorna todas os Serviços:**
-
-GET `/servicos`
-
-**Retorna um Serviço pelo ID:**
-
-* Parâmentro: `id_servico`
-
-GET `/servicos/<int:id_servico>/` 
-
-**Retorna todas os Status de Garantia:**
-
-GET `/statusgarantia`
-
-**Retorna um Status de Garantia pelo ID:**
-
-* Parâmentro: `id_statusgarantia`
-
-GET `/statusgarantia/<int:id_statusgarantia>/` 
-
-**Retorna todas os Status Ordem de Serviço:**
-
-GET `/statusordem`
-
-**Retorna um Status Ordem de Serviço pelo ID:**
-
-* Parâmentro: `id_statusordem`
-
-GET `/statusordem/<int:id_statusordem>/` 
+Feito com ♥ by Fernando Bueno Dansi :wink:
