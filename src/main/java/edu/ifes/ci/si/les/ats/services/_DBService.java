@@ -122,8 +122,8 @@ public class _DBService {
 		ordemDeServico1.setOrdemServicosItem(Arrays.asList(ordemServicoItem));
 		ordemDeServico2.setOrdemServicosItem(Arrays.asList(ordemServicoItem2,ordemServicoItem3));
 		
-		FeedBack feedBack1 = new FeedBack(null,"Muito Bom",5,ordemDeServico1);
-		FeedBack feedBack2 = new FeedBack(null,"Podia ser mais Barato",3,ordemDeServico2);
+		FeedBack feedBack1 = new FeedBack(null,"Muito Bom","Exelente",ordemDeServico1);
+		FeedBack feedBack2 = new FeedBack(null,"Podia ser mais Barato","Bom",ordemDeServico2);
 		
 		Garantia garantia1 = new Garantia(null, "Tela Descolou", "2020-08-15", ordemDeServico1, statusGarantia1);
 		Garantia garantia2 = new Garantia(null, "Celular não carrega", "2020-08-16", ordemDeServico2, statusGarantia1);

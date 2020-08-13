@@ -29,13 +29,13 @@ public class FeedBack implements Serializable {
 
 	@Column(length = 100)
 	@NotBlank(message = "O Campo deve ser preenchido")
-	@Size(min = 10, max = 100, message = "O campo deve ter pelo menos 10 e no maximo 100 letras")
+	@Size(min = 5, max = 100, message = "O campo deve ter pelo menos 5 e no maximo 100 letras")
 	private String comentario;
 
-	@Column(length = 1)
+	@Column(length = 50)
 	@NotBlank(message = "O Campo deve ser preenchido")
-	@Size(min = 1, max = 1, message = "O campo deve ter 1 digito")
-	private int satisfacao;
+	@Size(min = 3, max = 50, message = "O campo deve ter pelo menos 3 e no maximo 50 letras")
+	private String satisfacao;
 
 	@OneToOne
 	@JoinColumn(name = "ordemdeservico_id")

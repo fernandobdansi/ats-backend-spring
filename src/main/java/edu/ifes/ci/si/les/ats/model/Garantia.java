@@ -30,7 +30,7 @@ public class Garantia implements Serializable {
 
 	@Column(length = 150)
 	@NotBlank(message = "O Campo deve ser preenchido")
-	@Size(min = 10, max = 150, message = "O campo deve ter pelo menos 10 e no maximo 150 letras")
+	@Size(min = 5, max = 150, message = "O campo deve ter pelo menos 10 e no maximo 150 letras")
 	private String motivo;
 
 	@Column(length = 10)
