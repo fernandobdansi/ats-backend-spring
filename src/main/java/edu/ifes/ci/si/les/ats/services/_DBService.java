@@ -83,13 +83,13 @@ public class _DBService {
 		Cliente cliente4 = new Cliente(null, "Alexandre da Silva", "123.457.899-93", "(28) 9995-3872",
 				"Rua Oriente - Jacigua - Vargem Alta");
 
-		Tecnico tecnico1 = new Tecnico(null, "Alberto da Silva", "123.454.119-93", "(28) 8955-1872",
+		Tecnico tecnico1 = new Tecnico(null, "Tec Alberto da Silva", "123.454.119-93", "(28) 8955-1872",
 				"Rua Oriente - Jacigua - Vargem Alta","albertosilva","alb123");
-		Tecnico tecnico2 = new Tecnico(null, "Rodrigo da Silva", "123.465.999-93", "(28) 9994-7872",
+		Tecnico tecnico2 = new Tecnico(null, "Tec Rodrigo da Silva", "123.465.999-93", "(28) 9994-7872",
 				"Rua Oriente - Jacigua - Vargem Alta","rodrigosilva","rod123");
-		Tecnico tecnico3 = new Tecnico(null, "Fernando da Silva", "123.479.899-93", "(28) 9965-3872",
+		Tecnico tecnico3 = new Tecnico(null, "Tec Fernando da Silva", "123.479.899-93", "(28) 9965-3872",
 				"Rua Oriente - Jacigua - Vargem Alta","fernandosilva","fer123");
-		Tecnico tecnico4 = new Tecnico(null, "Lucas da Silva", "123.457.322-93", "(28) 9991-4872",
+		Tecnico tecnico4 = new Tecnico(null, "Tec Lucas da Silva", "123.457.322-93", "(28) 9991-4872",
 				"Rua Oriente - Jacigua - Vargem Alta","lucassilva","luc123");
 
 		Dispositivo dispositivo1 = new Dispositivo(null, modelo1, "123456789", "Cor Azul", cliente1);
@@ -112,8 +112,8 @@ public class _DBService {
 		StatusOrdemDeServico statusOrdem3 = new StatusOrdemDeServico(null, "Fechado");
 		StatusOrdemDeServico statusOrdem4 = new StatusOrdemDeServico(null, "Aguardando Peças");
 				
-		OrdemDeServico ordemDeServico1 = new OrdemDeServico(null, cliente1,dispositivo1,"2020-08-08","Tela Quebrada",tecnico1,100,"2020-08-10",statusOrdem3,false);
-		OrdemDeServico ordemDeServico2 = new OrdemDeServico(null, cliente2,dispositivo2,"2020-08-12","Bateria Ruim",tecnico2,200,"2020-08-13",statusOrdem3,true);
+		OrdemDeServico ordemDeServico1 = new OrdemDeServico(null, cliente1,dispositivo1,"2020-08-08","Tela Quebrada",tecnico1,100,"2020-08-10",statusOrdem3,"Nao");
+		OrdemDeServico ordemDeServico2 = new OrdemDeServico(null, cliente2,dispositivo2,"2020-08-12","Bateria Ruim",tecnico2,200,"2020-08-13",statusOrdem3,"Sim");
 
 		OrdemServicoItem ordemServicoItem = new OrdemServicoItem(ordemDeServico1, servicos1, 100);
 		OrdemServicoItem ordemServicoItem2 = new OrdemServicoItem(ordemDeServico2, servicos2, 150);

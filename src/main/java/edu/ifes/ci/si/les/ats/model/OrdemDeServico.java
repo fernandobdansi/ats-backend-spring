@@ -75,7 +75,7 @@ public class OrdemDeServico implements Serializable {
 	
 	@NotNull(message = "O atributo 'pagamento' deve ser preenchido")
 	@NotNull(message = "O pagamento deve ser preenchido")
-	private Boolean pagamento;
+	private String pagamento;
 
 	@NotNull(message = "O Campo deve ser preenchida")
 	@ManyToOne
@@ -85,7 +85,7 @@ public class OrdemDeServico implements Serializable {
     @Builder
 	public OrdemDeServico(Integer id, Cliente cliente, Dispositivo dispositivo, String dataEntrada,
 			String descricaoProblema, Tecnico tecnico, float valorTotal, String dataSaida,
-			StatusOrdemDeServico statusOrdemDeServico,Boolean pagamento) {
+			StatusOrdemDeServico statusOrdemDeServico,String pagamento) {
 		this.id = id;
 		this.cliente = cliente;
 		this.dispositivo = dispositivo;
