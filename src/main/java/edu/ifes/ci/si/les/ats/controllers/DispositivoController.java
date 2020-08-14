@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import edu.ifes.ci.si.les.ats.model.Cliente;
 import edu.ifes.ci.si.les.ats.model.Dispositivo;
 import edu.ifes.ci.si.les.ats.services.DispositivoService;
 import edu.ifes.ci.si.les.ats.services.exceptions.ConstraintException;
@@ -56,6 +57,14 @@ public class DispositivoController {
 	public ResponseEntity<Void> delete(@PathVariable Integer id) {
 		service.delete(id);
 		return ResponseEntity.noContent().build();
+	}
+	
+    @RequestMapping(value="/findByCliente/{idCliente}", method=RequestMethod.GET)
+	public ResponseEntity<Collection<Dispositivo>> findByCliente(@PathVariable Integer idCliente) {
+		Cliente obj = new Cliente();
+		obj.setId(idCliente);
+		Collection<Dispositivo> collection = service.findByCliente(obj);
+		return ResponseEntity.ok().body(collection);
 	}
 
 }

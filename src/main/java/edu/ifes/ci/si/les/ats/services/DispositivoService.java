@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
+import edu.ifes.ci.si.les.ats.model.Cliente;
 import edu.ifes.ci.si.les.ats.model.Dispositivo;
 import edu.ifes.ci.si.les.ats.repositories.DispositivoRepository;
 import edu.ifes.ci.si.les.ats.services.exceptions.DataIntegrityException;
@@ -56,5 +57,9 @@ public class DispositivoService {
 			throw new DataIntegrityException("Não é possível excluir um item associado a outros!");
 		}
 	}
+	
+    public Collection<Dispositivo> findByCliente(Cliente cliente) {
+        return repository.findByCliente(cliente);
+    }
 
 }
