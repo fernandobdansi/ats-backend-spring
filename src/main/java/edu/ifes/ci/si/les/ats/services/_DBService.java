@@ -112,8 +112,8 @@ public class _DBService {
 		StatusOrdemDeServico statusOrdem3 = new StatusOrdemDeServico(null, "Fechado");
 		StatusOrdemDeServico statusOrdem4 = new StatusOrdemDeServico(null, "Aguardando Peças");
 				
-		OrdemDeServico ordemDeServico1 = new OrdemDeServico(null, cliente1,dispositivo1,"2020-08-08","Tela Quebrada",tecnico1,100,"2020-08-10",statusOrdem3);
-		OrdemDeServico ordemDeServico2 = new OrdemDeServico(null, cliente2,dispositivo2,"2020-08-12","Bateria Ruim",tecnico2,200,"2020-08-13",statusOrdem3);
+		OrdemDeServico ordemDeServico1 = new OrdemDeServico(null, cliente1,dispositivo1,"2020-08-08","Tela Quebrada",tecnico1,100,"2020-08-10",statusOrdem3,false);
+		OrdemDeServico ordemDeServico2 = new OrdemDeServico(null, cliente2,dispositivo2,"2020-08-12","Bateria Ruim",tecnico2,200,"2020-08-13",statusOrdem3,true);
 
 		OrdemServicoItem ordemServicoItem = new OrdemServicoItem(ordemDeServico1, servicos1, 100);
 		OrdemServicoItem ordemServicoItem2 = new OrdemServicoItem(ordemDeServico2, servicos2, 150);

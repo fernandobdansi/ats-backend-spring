@@ -72,6 +72,10 @@ public class OrdemDeServico implements Serializable {
 	@NotBlank(message = "O Campo deve ser preenchido")
 	@Size(min = 10, max = 10, message = "O campo deve ter 8 digitos")
 	private String dataSaida;
+	
+	@NotNull(message = "O atributo 'pagamento' deve ser preenchido")
+	@NotNull(message = "O pagamento deve ser preenchido")
+	private Boolean pagamento;
 
 	@NotNull(message = "O Campo deve ser preenchida")
 	@ManyToOne
@@ -81,7 +85,7 @@ public class OrdemDeServico implements Serializable {
     @Builder
 	public OrdemDeServico(Integer id, Cliente cliente, Dispositivo dispositivo, String dataEntrada,
 			String descricaoProblema, Tecnico tecnico, float valorTotal, String dataSaida,
-			StatusOrdemDeServico statusOrdemDeServico) {
+			StatusOrdemDeServico statusOrdemDeServico,Boolean pagamento) {
 		this.id = id;
 		this.cliente = cliente;
 		this.dispositivo = dispositivo;
@@ -91,6 +95,7 @@ public class OrdemDeServico implements Serializable {
 		this.valorTotal = valorTotal;
 		this.dataSaida = dataSaida;
 		this.statusOrdemDeServico = statusOrdemDeServico;
+		this.pagamento = pagamento;
 	}
 
 }

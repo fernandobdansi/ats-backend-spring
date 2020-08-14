@@ -21,6 +21,7 @@ public class AtsApplication {
 				registry.addMapping("/**")
 					.allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD", "TRACE", "CONNECT")
 					.allowedOrigins("https://fbuenod.github.io");
+				    //.allowedOrigins("http://localhost:8080");
 			}
 		};
 	}
