@@ -31,10 +31,11 @@ public class OrdemDeServico implements Serializable {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
+	/*
 	@NotNull(message = "O Campo deve ser preenchida")
 	@ManyToOne
 	@JoinColumn(name = "cliente_id")
-	private Cliente cliente;
+	private Cliente cliente;*/
 
 	@NotNull(message = "O Campo deve ser preenchida")
 	@ManyToOne
@@ -52,9 +53,9 @@ public class OrdemDeServico implements Serializable {
 	private String dataEntrada;
 
 	@NotNull(message = "O Campo deve ser preenchida")
-	@Column(length = 50)
+	@Column(length = 150)
 	@NotBlank(message = "O Campo deve ser preenchido")
-	@Size(min = 10, max = 50, message = "O campo deve ter pelo menos 10 e no maximo 50 letras")
+	@Size(min = 10, max = 150, message = "O campo deve ter pelo menos 10 e no maximo 150 letras")
 	private String descricaoProblema;
 
 	@NotNull(message = "O Campo deve ser preenchida")
@@ -83,11 +84,11 @@ public class OrdemDeServico implements Serializable {
 	private StatusOrdemDeServico statusOrdemDeServico;
 
     @Builder
-	public OrdemDeServico(Integer id, Cliente cliente, Dispositivo dispositivo, String dataEntrada,
+	public OrdemDeServico(Integer id, Dispositivo dispositivo, String dataEntrada,
 			String descricaoProblema, Tecnico tecnico, float valorTotal, String dataSaida,
 			StatusOrdemDeServico statusOrdemDeServico,String pagamento) {
 		this.id = id;
-		this.cliente = cliente;
+		//this.cliente = cliente;
 		this.dispositivo = dispositivo;
 		this.dataEntrada = dataEntrada;
 		this.descricaoProblema = descricaoProblema;
