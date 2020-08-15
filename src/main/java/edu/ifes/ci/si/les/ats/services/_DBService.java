@@ -14,6 +14,7 @@ import edu.ifes.ci.si.les.ats.model.Garantia;
 import edu.ifes.ci.si.les.ats.model.Marca;
 import edu.ifes.ci.si.les.ats.model.Modelo;
 import edu.ifes.ci.si.les.ats.model.Orcamento;
+import edu.ifes.ci.si.les.ats.model.OrcamentoServicoItem;
 import edu.ifes.ci.si.les.ats.model.OrdemDeServico;
 import edu.ifes.ci.si.les.ats.model.OrdemServicoItem;
 import edu.ifes.ci.si.les.ats.model.Servicos;
@@ -60,7 +61,7 @@ public class _DBService {
 	private GarantiaRepository garantiaRepository;
 	@Autowired
 	private OrcamentoRepository orcamentoRepository;
-	
+
 	public void instantiateTestDatabase() throws ParseException, IOException {
 
 		// Instanciando os objetos de modelo
@@ -84,13 +85,13 @@ public class _DBService {
 				"Rua Oriente - Jacigua - Vargem Alta");
 
 		Tecnico tecnico1 = new Tecnico(null, "Tec Alberto da Silva", "123.454.119-93", "(28) 8955-1872",
-				"Rua Oriente - Jacigua - Vargem Alta","albertosilva","alb123");
+				"Rua Oriente - Jacigua - Vargem Alta", "albertosilva", "alb123");
 		Tecnico tecnico2 = new Tecnico(null, "Tec Rodrigo da Silva", "123.465.999-93", "(28) 9994-7872",
-				"Rua Oriente - Jacigua - Vargem Alta","rodrigosilva","rod123");
+				"Rua Oriente - Jacigua - Vargem Alta", "rodrigosilva", "rod123");
 		Tecnico tecnico3 = new Tecnico(null, "Tec Fernando da Silva", "123.479.899-93", "(28) 9965-3872",
-				"Rua Oriente - Jacigua - Vargem Alta","fernandosilva","fer123");
+				"Rua Oriente - Jacigua - Vargem Alta", "fernandosilva", "fer123");
 		Tecnico tecnico4 = new Tecnico(null, "Tec Lucas da Silva", "123.457.322-93", "(28) 9991-4872",
-				"Rua Oriente - Jacigua - Vargem Alta","lucassilva","luc123");
+				"Rua Oriente - Jacigua - Vargem Alta", "lucassilva", "luc123");
 
 		Dispositivo dispositivo1 = new Dispositivo(null, modelo1, "123456789", "Cor Azul", cliente1);
 		Dispositivo dispositivo2 = new Dispositivo(null, modelo2, "127476789", "Cor Vermelha", cliente2);
@@ -111,26 +112,35 @@ public class _DBService {
 		StatusOrdemDeServico statusOrdem2 = new StatusOrdemDeServico(null, "Em Vistoria");
 		StatusOrdemDeServico statusOrdem3 = new StatusOrdemDeServico(null, "Fechado");
 		StatusOrdemDeServico statusOrdem4 = new StatusOrdemDeServico(null, "Aguardando Peças");
-				
-		OrdemDeServico ordemDeServico1 = new OrdemDeServico(null,dispositivo1,"2020-08-08","Tela Quebrada",tecnico1,100,"2020-08-10",statusOrdem3,"Nao");
-		OrdemDeServico ordemDeServico2 = new OrdemDeServico(null,dispositivo2,"2020-08-12","Bateria Ruim",tecnico2,200,"2020-08-13",statusOrdem3,"Sim");
+
+		OrdemDeServico ordemDeServico1 = new OrdemDeServico(null, dispositivo1, "2020-08-08", "Tela Quebrada", tecnico1,
+				100, "2020-08-10", statusOrdem3, "Nao");
+		OrdemDeServico ordemDeServico2 = new OrdemDeServico(null, dispositivo2, "2020-08-12", "Bateria Ruim", tecnico2,
+				200, "2020-08-13", statusOrdem3, "Sim");
 
 		OrdemServicoItem ordemServicoItem = new OrdemServicoItem(ordemDeServico1, servicos1, 100);
 		OrdemServicoItem ordemServicoItem2 = new OrdemServicoItem(ordemDeServico2, servicos2, 150);
 		OrdemServicoItem ordemServicoItem3 = new OrdemServicoItem(ordemDeServico2, servicos4, 50);
-		
+
+		Orcamento orcamento1 = new Orcamento(null, dispositivo1, tecnico1, "Tela Quebrada", 100);
+		Orcamento orcamento2 = new Orcamento(null, dispositivo2, tecnico2, "Bateria Ruim", 200);
+
+		OrcamentoServicoItem orcamentoServicoItem = new OrcamentoServicoItem(orcamento1, servicos1, 100);
+		OrcamentoServicoItem orcamentoServicoItem2 = new OrcamentoServicoItem(orcamento2, servicos2, 150);
+		OrcamentoServicoItem orcamentoServicoItem3 = new OrcamentoServicoItem(orcamento2, servicos4, 50);
+
+		orcamento1.setOrcamentoServicoItem(Arrays.asList(orcamentoServicoItem));
+		orcamento2.setOrcamentoServicoItem(Arrays.asList(orcamentoServicoItem2, orcamentoServicoItem3));
+
 		ordemDeServico1.setOrdemServicosItem(Arrays.asList(ordemServicoItem));
-		ordemDeServico2.setOrdemServicosItem(Arrays.asList(ordemServicoItem2,ordemServicoItem3));
-		
-		FeedBack feedBack1 = new FeedBack(null,"Muito Bom","Exelente",ordemDeServico1);
-		FeedBack feedBack2 = new FeedBack(null,"Podia ser mais Barato","Bom",ordemDeServico2);
-		
+		ordemDeServico2.setOrdemServicosItem(Arrays.asList(ordemServicoItem2, ordemServicoItem3));
+
+		FeedBack feedBack1 = new FeedBack(null, "Muito Bom", "Exelente", ordemDeServico1);
+		FeedBack feedBack2 = new FeedBack(null, "Podia ser mais Barato", "Bom", ordemDeServico2);
+
 		Garantia garantia1 = new Garantia(null, "Tela Descolou", "2020-08-15", ordemDeServico1, statusGarantia1);
 		Garantia garantia2 = new Garantia(null, "Celular não carrega", "2020-08-16", ordemDeServico2, statusGarantia1);
-		
-		Orcamento orcamento1 = new Orcamento(null, cliente1, dispositivo1, tecnico1, "Tela Quebrada", 100);
-		Orcamento orcamento2 = new Orcamento(null, cliente2, dispositivo2, tecnico2, "Bateria Ruim", 200);
-		
+
 		marcaRepository.saveAll(Arrays.asList(marca1, marca2, marca3, marca4));
 		modeloRepository.saveAll(Arrays.asList(modelo1, modelo2, modelo3, modelo4));
 		clienteRepository.saveAll(Arrays.asList(cliente1, cliente2, cliente3, cliente4));
@@ -139,13 +149,11 @@ public class _DBService {
 		servicosRepository.saveAll(Arrays.asList(servicos1, servicos2, servicos3, servicos4));
 		statusgarantiaRepository.saveAll(Arrays.asList(statusGarantia1, statusGarantia2, statusGarantia3, statusGarantia4));
 		statusordemdeservicoRepository.saveAll(Arrays.asList(statusOrdem1, statusOrdem2, statusOrdem3, statusOrdem4));
-		
+
 		ordemDeServicoRepository.saveAll(Arrays.asList(ordemDeServico1, ordemDeServico2));
 		feedBackRepository.saveAll(Arrays.asList(feedBack1, feedBack2));
 		garantiaRepository.saveAll(Arrays.asList(garantia1, garantia2));
 		orcamentoRepository.saveAll(Arrays.asList(orcamento1, orcamento2));
-		
-		
-		
+
 	}
 }
