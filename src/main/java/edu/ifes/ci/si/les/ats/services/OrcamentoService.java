@@ -81,7 +81,7 @@ public class OrcamentoService {
 
 	public boolean verificarRegrasDeNegocio(Orcamento obj) {
 
-		// Regra de Negócio 1: Cliente não pode ter Ordens não pagas
+		// Regra de Negócio 3: Cliente não pode ter Ordens não pagas
 		Collection<Cliente> devedores = clienteRepository.findDevedores();
 		boolean clienteDevedor = false;
 		for (Cliente devedor : devedores) {
