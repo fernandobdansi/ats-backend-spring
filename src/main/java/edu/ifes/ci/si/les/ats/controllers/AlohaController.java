@@ -11,7 +11,7 @@ public class AlohaController {
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public String hello() {
-		return "Hello! The Service Is Working!";
+		return "Hello! The Service Is Working! :)";
 	}
 
 }
