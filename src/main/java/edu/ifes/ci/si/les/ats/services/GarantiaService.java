@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
-import edu.ifes.ci.si.les.ats.model.FeedBack;
 import edu.ifes.ci.si.les.ats.model.Garantia;
 import edu.ifes.ci.si.les.ats.model.OrdemDeServico;
 import edu.ifes.ci.si.les.ats.repositories.GarantiaRepository;
