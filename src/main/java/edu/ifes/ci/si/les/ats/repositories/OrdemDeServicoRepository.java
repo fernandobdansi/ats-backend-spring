@@ -16,4 +16,8 @@ public interface OrdemDeServicoRepository extends JpaRepository<OrdemDeServico, 
 	@Query(value = "SELECT ordem_de_servico.*  FROM feed_back INNER JOIN ordem_de_servico ON feed_back.ordemdeservico_id = ordem_de_servico.id", nativeQuery = true)
 	public Collection<OrdemDeServico> findOrdemFeedBack();
 
+	@Transactional(readOnly = true)
+	@Query(value = "SELECT ordem_de_servico.*  FROM garantia INNER JOIN ordem_de_servico ON garantia.ordemdeservico_id = ordem_de_servico.id", nativeQuery = true)
+	public Collection<OrdemDeServico> findOrdemGarantia();
+
 }
