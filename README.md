@@ -60,7 +60,10 @@ O objetivo do sistema é agilizar o processo de ordens de serviço e garantir ma
 ### Relatórios
 
 ```
-* Em breve!	
+* Relatório Ordens: Fechadas e Não Pagas
+* Relatório Ordens: Filtro Status
+* Relatório FeedBacks: Filtro Satisfação
+* Relatório Garantia: Filtro Satisfação	
 ```
 
 ## :computer: Instalação e execução <a name="-instalacao"/></a>
