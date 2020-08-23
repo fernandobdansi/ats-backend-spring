@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import edu.ifes.ci.si.les.ats.model.Cliente;
 import edu.ifes.ci.si.les.ats.model.OrdemDeServico;
 import edu.ifes.ci.si.les.ats.model.OrdemServicoItem;
+import edu.ifes.ci.si.les.ats.model.StatusOrdemDeServico;
 import edu.ifes.ci.si.les.ats.repositories.ClienteRepository;
 import edu.ifes.ci.si.les.ats.repositories.OrdemDeServicoRepository;
 import edu.ifes.ci.si.les.ats.services.exceptions.BusinessRuleException;
@@ -98,5 +99,13 @@ public class OrdemDeServicoService {
 			return false;
 		}
 	}
+	
+    public Collection<OrdemDeServico> findOrdemFechadasNaoPagas() {
+        return ordemServicoRepository.findOrdemFechadasNaoPagas();
+    }
+    
+    public Collection<OrdemDeServico> findByStatusOrdemDeServico(StatusOrdemDeServico statusOrdemDeServico) {
+        return ordemServicoRepository.findByStatusOrdemDeServico(statusOrdemDeServico);
+    }
 
 }

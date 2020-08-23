@@ -85,5 +85,9 @@ public class FeedBackService {
 			return false;
 		}
 	}
+	
+    public Collection<FeedBack> findBySatisfacao(String satisfacao) {
+        return repository.findBySatisfacao(satisfacao);
+    }
 
 }

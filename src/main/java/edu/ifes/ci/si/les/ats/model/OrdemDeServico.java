@@ -32,10 +32,12 @@ public class OrdemDeServico implements Serializable {
 	private Integer id;
 
 	/*
-	@NotNull(message = "O Campo deve ser preenchida")
-	@ManyToOne
-	@JoinColumn(name = "cliente_id")
-	private Cliente cliente;*/
+	 * @NotNull(message = "O Campo deve ser preenchida")
+	 * 
+	 * @ManyToOne
+	 * 
+	 * @JoinColumn(name = "cliente_id") private Cliente cliente;
+	 */
 
 	@NotNull(message = "O Campo deve ser preenchida")
 	@ManyToOne
@@ -73,7 +75,7 @@ public class OrdemDeServico implements Serializable {
 	@NotBlank(message = "O Campo deve ser preenchido")
 	@Size(min = 10, max = 10, message = "O campo deve ter 8 digitos")
 	private String dataSaida;
-	
+
 	@NotNull(message = "O atributo 'pagamento' deve ser preenchido")
 	@NotNull(message = "O pagamento deve ser preenchido")
 	private String pagamento;
@@ -83,12 +85,12 @@ public class OrdemDeServico implements Serializable {
 	@JoinColumn(name = "statusordemdeservico_id")
 	private StatusOrdemDeServico statusOrdemDeServico;
 
-    @Builder
-	public OrdemDeServico(Integer id, Dispositivo dispositivo, String dataEntrada,
-			String descricaoProblema, Tecnico tecnico, float valorTotal, String dataSaida,
-			StatusOrdemDeServico statusOrdemDeServico,String pagamento) {
+	@Builder
+	public OrdemDeServico(Integer id, Dispositivo dispositivo, String dataEntrada, String descricaoProblema,
+			Tecnico tecnico, float valorTotal, String dataSaida, StatusOrdemDeServico statusOrdemDeServico,
+			String pagamento) {
 		this.id = id;
-		//this.cliente = cliente;
+		// this.cliente = cliente;
 		this.dispositivo = dispositivo;
 		this.dataEntrada = dataEntrada;
 		this.descricaoProblema = descricaoProblema;

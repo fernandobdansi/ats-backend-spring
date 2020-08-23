@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import edu.ifes.ci.si.les.ats.model.Garantia;
 import edu.ifes.ci.si.les.ats.model.OrdemDeServico;
+import edu.ifes.ci.si.les.ats.model.StatusGarantia;
 import edu.ifes.ci.si.les.ats.repositories.GarantiaRepository;
 import edu.ifes.ci.si.les.ats.repositories.OrdemDeServicoRepository;
 import edu.ifes.ci.si.les.ats.services.exceptions.BusinessRuleException;
@@ -86,5 +87,10 @@ public class GarantiaService {
 			return false;
 		}
 	}
+	
+    public Collection<Garantia> findByStatusGarantia(StatusGarantia statusGarantia) {
+        return repository.findByStatusGarantia(statusGarantia);
+    }
+
 
 }

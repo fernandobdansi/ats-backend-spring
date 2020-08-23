@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import edu.ifes.ci.si.les.ats.model.OrdemDeServico;
+import edu.ifes.ci.si.les.ats.model.StatusOrdemDeServico;
 
 @Repository
 public interface OrdemDeServicoRepository extends JpaRepository<OrdemDeServico, Integer> {
@@ -19,5 +20,13 @@ public interface OrdemDeServicoRepository extends JpaRepository<OrdemDeServico, 
 	@Transactional(readOnly = true)
 	@Query(value = "SELECT ordem_de_servico.*  FROM garantia INNER JOIN ordem_de_servico ON garantia.ordemdeservico_id = ordem_de_servico.id", nativeQuery = true)
 	public Collection<OrdemDeServico> findOrdemGarantia();
+	
+	@Transactional(readOnly = true)
+	@Query(value = "SELECT ordem_de_servico.*  FROM ordem_de_servico where ordem_de_servico.pagamento ='Nao' and ordem_de_servico.statusordemdeservico_id=3", nativeQuery = true)
+	public Collection<OrdemDeServico> findOrdemFechadasNaoPagas();
+	
+    @Transactional(readOnly = true)
+	public Collection<OrdemDeServico> findByStatusOrdemDeServico(StatusOrdemDeServico statusOrdemDeServico);
+
 
 }

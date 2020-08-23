@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import edu.ifes.ci.si.les.ats.model.Garantia;
+import edu.ifes.ci.si.les.ats.model.StatusGarantia;
 import edu.ifes.ci.si.les.ats.services.GarantiaService;
 import edu.ifes.ci.si.les.ats.services.exceptions.ConstraintException;
 
@@ -56,6 +57,14 @@ public class GarantiaController {
 	public ResponseEntity<Void> delete(@PathVariable Integer id) {
 		service.delete(id);
 		return ResponseEntity.noContent().build();
+	}
+	
+    @RequestMapping(value="/findByStatusGarantia/{idStatus}", method=RequestMethod.GET)
+	public ResponseEntity<Collection<Garantia>> findByStatusGarantia(@PathVariable Integer idStatus) {
+    	StatusGarantia obj = new StatusGarantia();
+		obj.setId(idStatus);
+		Collection<Garantia> collection = service.findByStatusGarantia(obj);
+		return ResponseEntity.ok().body(collection);
 	}
 
 }

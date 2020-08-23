@@ -63,5 +63,7 @@ public class Orcamento implements Serializable {
 		this.descricaoProblema = descricaoProblema;
 		this.valorTotal = valorTotal;
 	}
+	
+	
 
 }

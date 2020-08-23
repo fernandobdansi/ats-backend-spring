@@ -57,6 +57,12 @@ public class FeedBackController {
 		service.delete(id);
 		return ResponseEntity.noContent().build();
 	}
+	
+    @RequestMapping(value="/findBySatisfacao/{satisfacao}", method=RequestMethod.GET)
+	public ResponseEntity<Collection<FeedBack>> findBySatisfacao(@PathVariable String satisfacao) {
+		Collection<FeedBack> collection = service.findBySatisfacao(satisfacao);
+		return ResponseEntity.ok().body(collection);
+	}
 
 }
  

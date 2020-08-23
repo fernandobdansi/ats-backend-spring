@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import edu.ifes.ci.si.les.ats.model.OrdemDeServico;
+import edu.ifes.ci.si.les.ats.model.StatusOrdemDeServico;
 import edu.ifes.ci.si.les.ats.services.OrdemDeServicoService;
 import edu.ifes.ci.si.les.ats.services.exceptions.ConstraintException;
 
@@ -56,6 +57,20 @@ public class OrdemDeServicoController {
 	public ResponseEntity<Void> delete(@PathVariable Integer id) {
 		service.delete(id);
 		return ResponseEntity.noContent().build();
+	}
+	
+    @RequestMapping(value="/findOrdemFechadasNaoPagas", method=RequestMethod.GET)
+	public ResponseEntity<Collection<OrdemDeServico>> findOrdemFechadasNaoPagas() {
+		Collection<OrdemDeServico> collection = service.findOrdemFechadasNaoPagas();
+		return ResponseEntity.ok().body(collection);
+	}
+    
+    @RequestMapping(value="/findByStatusOrdemDeServico/{idStatus}", method=RequestMethod.GET)
+	public ResponseEntity<Collection<OrdemDeServico>> findByStatusOrdemDeServico(@PathVariable Integer idStatus) {
+    	StatusOrdemDeServico obj = new StatusOrdemDeServico();
+		obj.setId(idStatus);
+		Collection<OrdemDeServico> collection = service.findByStatusOrdemDeServico(obj);
+		return ResponseEntity.ok().body(collection);
 	}
 
 }
