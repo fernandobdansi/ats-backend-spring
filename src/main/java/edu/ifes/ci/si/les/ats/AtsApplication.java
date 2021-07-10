@@ -20,7 +20,7 @@ public class AtsApplication {
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**")
 					.allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD", "TRACE", "CONNECT")
-					.allowedOrigins("https://fbdansi.github.io");
+					.allowedOrigins("https://fbdansi.dev.br");
 				    //.allowedOrigins("http://localhost:8080");
 			}
 		};
