@@ -76,7 +76,7 @@ O objetivo do sistema é agilizar o processo de ordens de serviço e garantir ma
 
 ## :link: Links <a name="-links"/></a>
 
-- [GitHub Pages](https://fbdansi.github.io/ats-frontend-vue/) - Implantação do ATS Frontend Vue.js;
+- [GitHub Pages](https://fernandobdansi.github.io/ats-frontend-vue/) - Implantação do ATS Frontend Vue.js;
 - [Heroku](https://ats-backend-spring.herokuapp.com/) - Implantação do ATS Backend Spring Boot;
 - [Postman](https://documenter.getpostman.com/view/8892843/T1LLGUP5) - Documentação do ATS Backend Spring Boot;
 
