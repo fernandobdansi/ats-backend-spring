@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="ATS" src="https://github.com/fbuenod/ats-backend-spring/blob/master/assets/logoats.png" />
+    <img alt="ATS" src="https://github.com/fernandobdansi/ats-backend-spring/blob/master/assets/logoats.png" />
 </h1>
 
 <h3 align="center">
@@ -9,16 +9,16 @@
 <p align="center">Exemplo de um Sistema para Gerenciamento de uma Assistência Técnica</p>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/fbuenod/ats-backend-spring?color=%2304D361">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/fernandobdansi/ats-backend-spring?color=%2304D361">
 
-  <a href="https://www.linkedin.com/in/fernandobuenodansi/">
+  <a href="https://www.linkedin.com/in/fernandobdansi/">
     <img alt="Made by Fernando Bueno Dansi" src="https://img.shields.io/badge/made%20by-Fernando%20Bueno%20Dansi-%2304D361">
   </a>
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
 
-  <a href="https://github.com/fbuenod/ats-backend-spring/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/fbuenod/ats-backend-spring?style=social">
+  <a href="https://github.com/fernandobdansi/ats-backend-spring/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/fernandobdansi/ats-backend-spring?style=social">
   </a>
 </p>
 
@@ -86,7 +86,7 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 
 ## :email: Contato
 
-Fernando Bueno Dansi - [GitHub](https://github.com/fbdansi) - [LinkedIn](https://www.linkedin.com/in/fernandobuenodansi) - **fernandobuenodansi@gmail.com**
+Fernando Bueno Dansi - [GitHub](https://github.com/fernandobdansi) - [LinkedIn](https://www.linkedin.com/in/fernandobdansi) - **fernandobuenodansi@gmail.com**
 
 ---
 
